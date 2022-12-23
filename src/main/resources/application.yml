@@ -1,0 +1,8 @@
+#开发环境配置
+server:
+  port: 8088
+
+#Spring 配置
+spring:
+  profiles:
+    active: local

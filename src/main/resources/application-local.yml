@@ -1,0 +1,11 @@
+#数据源配置
+spring:
+  datasource:
+    dynamic:
+      datasource:
+        master:
+          username: WYZHCJ
+          password: WYZHCJ
+          url: jdbc:oracle:thin:@144.52.16.141:1521:orcl
+          driver-class-name: oracle.jdbc.driver.OracleDriver
+

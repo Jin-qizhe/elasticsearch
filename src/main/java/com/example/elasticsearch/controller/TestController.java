@@ -80,6 +80,11 @@ public class TestController {
         userService.deleteById(id);
     }
 
+    @PostMapping("/delAll")
+    public void delAll() {
+        userService.deleteAll();
+    }
+
     @PostMapping("/getOne")
     public User getOne(String id) {
         Optional<User> optional = userService.findById(id);
@@ -181,6 +186,7 @@ public class TestController {
         SearchRequest searchRequest = new SearchRequest("christy");
         // 创建搜索对象
         SearchSourceBuilder sourceBuilder = new SearchSourceBuilder();
+        //构造查询条件
         BoolQueryBuilder boolQueryBuilder = new BoolQueryBuilder();
         MatchQueryBuilder matchQueryBuilder = QueryBuilders.matchQuery("name", name);//模糊
         MatchPhraseQueryBuilder matchPhraseQueryBuilder2 = QueryBuilders.matchPhraseQuery("introduce", name);//精准
